@@ -97,13 +97,13 @@
 
 .tables {
   padding: 4px 21px;
-  width: 65%
+  width: 100%
 
 }
 
 .customer {
   z-index: 1;
-  width: 35%
+  width: 55%
 }
 
 @media (min-width: 768px) {

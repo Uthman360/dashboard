@@ -31,7 +31,7 @@
     background: var(--background-color);
     box-shadow: var(--box-shadow-color) 0 7px 29px 0;
     border: 1px solid var(--border-color);
-    width: 60%;
+    width: 100%;
     z-index: 1;
 }
 
