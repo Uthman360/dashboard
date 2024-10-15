@@ -4,6 +4,7 @@ import Navbar from './Topbar/Topbar';
 import Sidebar from './Sidebar/Sidebar';
 
 const Dashboard = ({ children }) => {
+    // Set the initial dark mode based on localStorage synchronously
     const [isDark, setDarkMode] = useState(() => localStorage.getItem('theme') === 'dark');
     const [sidebar, setSidebar] = useState(() => localStorage.getItem('status') === 'close');
     const [popup, setPopup] = useState(false);
@@ -12,6 +13,7 @@ const Dashboard = ({ children }) => {
         setDarkMode((prevMode) => {
             const newMode = !prevMode;
             localStorage.setItem('theme', newMode ? 'dark' : 'light');
+            document.body.classList.toggle('dark', newMode);
             return newMode;
         });
     };
@@ -24,19 +26,11 @@ const Dashboard = ({ children }) => {
         });
     };
 
-  
-    useEffect(() => {
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        setDarkMode(savedTheme === 'dark');
-        document.body.classList.toggle('dark', savedTheme === 'dark');
-    }, [isDark]);
-
-    useEffect(() => {
-        // Update the local storage when the theme changes
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        document.body.classList.toggle('dark', isDark);
-    }, [isDark]);
-
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark');
+    } else {
+        document.body.classList.remove('dark');
+    }
 
     const togglePopup = () => {
         setPopup((prevPopup) => !prevPopup);

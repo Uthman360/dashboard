@@ -51,16 +51,10 @@
   --menu-color:#fff;
 
 }
-body {
-  min-height: 100vh;
-  background-color: #fff;
-  color: black;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
 
 
 body.dark {
-  background-color: #242526;
+  background-color: #242526 ;
   color: white;
 }
 /* === Custom Scroll Bar CSS === */
