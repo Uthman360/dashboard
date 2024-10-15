@@ -1,0 +1,156 @@
+:root {
+    --submenu-background: #fff;
+    --submenu-border: #cccccc;
+    --submenu-link-color: #525252;
+    --submenu-link-hover-color: #006ae6;
+    --submenu-divider-color: #ccc;
+    --submenu-box-shadow: rgba(0, 0, 0, 0.2);
+}
+
+.wrapper.dark {
+    --submenu-background: #1a1a1a;
+    --submenu-border: #444;
+    --submenu-link-color: #ccc;
+    --submenu-link-hover-color: #4DA3FF;
+    --submenu-divider-color: #555;
+    --submenu-box-shadow: rgba(255, 255, 255, 0.1);
+}
+
+.sub_menu_wrap {
+    width: 320px;
+    min-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    z-index: 1;
+    position: fixed;
+    margin-left: -257px;
+}
+
+.sub_menu_wrap.open-menu {
+    min-height: 400px;
+}
+
+.open-menu {
+    margin-left: -248px;
+    position: fixed;
+    z-index: 1;
+}
+
+.sub_menu {
+    background-color: var(--submenu-background);
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 5px 10px var(--submenu-box-shadow);
+    border-radius: 8px;
+    border: 1px solid var(--submenu-border);
+}
+
+.user_info {
+    display: flex;
+    align-items: center;
+}
+
+.user_info h3 {
+    font-weight: 500;
+}
+
+.user_e a {
+    font-size: 0.75rem;
+}
+
+.user_e a:hover {
+    color: var(--submenu-link-hover-color);
+}
+
+.user_info img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    margin: 10px 13px 0 0;
+    border: 2px solid #00a261;
+    object-fit: cover;
+}
+
+.sub_menu hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background-color: var(--submenu-divider-color);
+    margin: 15px 0 10px;
+}
+
+.sub_menu_link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--submenu-link-color);
+    padding: 0.3rem;
+}
+
+.sub_menu_link p {
+    width: 100%;
+}
+
+.sub_menu_link img {
+    width: 40px;
+    background-color: #e5e5e5;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 15px;
+}
+
+.sub_menu_link span {
+    font-size: 22px;
+    transition: transform 0.5s;
+}
+
+.sub_menu_link:hover span {
+    transform: translateX(5px);
+}
+
+.sub_menu_link:hover p {
+    font-weight: 600;
+}
+
+.mode {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    line-height: 1.125rem;
+    font-weight: 500;
+    color: var(--submenu-link-color);
+}
+
+.mode:hover i {
+    color: var(--submenu-link-hover-color);
+}
+
+.mode:hover {
+    color: var(--submenu-link-color);
+}
+
+.mode span {
+    margin-left: 7px;
+}
+
+.sign_out {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    height: 2rem;
+    padding: 0 0.75rem;
+    font-weight: 500;
+    font-size: 0.85rem;
+    border: 1px solid var(--submenu-border);
+    border-radius: 4px;
+    background-color: var(--submenu-background);
+    color: var(--submenu-link-color);
+}
+
+.wrapper.dark .sign_out {
+    background-color: #444;
+    color: #ccc;
+    border-color: #555;
+}

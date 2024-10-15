@@ -1,0 +1,49 @@
+:root {
+    --background-color: white;
+    --text-color: black;
+    --border-color: #cccccc;
+    --box-shadow-color: rgba(100, 100, 111, 0.2);
+    --title-border-color: #ccc;
+    --tooltip-background-color: rgba(255, 255, 255, 0.9);
+    --tooltip-text-color: black;
+}
+
+.wrapper.dark {
+    --background-color: #1a1a1a;
+    --text-color: #ccc;
+    --border-color: #444;
+    --box-shadow-color: rgba(100, 100, 111, 0.4);
+    --title-border-color: #444;
+    --tooltip-background-color: rgba(0, 0, 0, 0.9);
+    --tooltip-text-color: #ccc;
+}
+
+.apexcharts-tooltip {
+    color: #1a1a1a;
+}
+
+.apexcharts-menu.apexcharts-menu-open {
+    background: var(--background-color);
+}
+
+.main_chart {
+    border-radius: 14px;
+    background: var(--background-color);
+    box-shadow: var(--box-shadow-color) 0 7px 29px 0;
+    border: 1px solid var(--border-color);
+    width: 60%;
+    z-index: 1;
+}
+
+.chart {
+    margin: 20px;
+    margin-top: 50px;
+}
+
+.chartTitle {
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    color: var(--text-color);
+    border-bottom: 1px solid var(--title-border-color);
+    padding: 22px 0 22px 37px;
+}

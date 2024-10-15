@@ -1,0 +1,157 @@
+:root {
+  /* Light Theme Colors */
+  --background-color: white;
+  --text-color: black;
+  --border-color: #cccccc;
+  --box-shadow-color: rgba(100, 100, 111, 0.2);
+}
+
+.wrapper.dark {
+  --background-color: #1a1a1a;
+  --text-color: white;
+  --border-color: #444;
+  --box-shadow-color: rgba(100, 100, 111, 0.4);
+}
+
+.radialBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+.CircularProgressbar {
+  width: 4rem;
+  overflow: visible;
+}
+
+.CircularProgressbar-path {
+  stroke: white;
+  stroke-width: 12px;
+  filter: drop-shadow(2px 4px 6px white);
+}
+
+.CircularProgressbar-trail {
+  display: none;
+}
+
+.CircularProgressbar-text {
+  fill: white;
+  dominant-baseline: middle;
+  text-anchor: middle;
+  font-size: 20px;
+}
+
+.radialBar > span {
+  font-size: 17px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  color: #fff;
+  gap: 17px;
+  flex-grow: 1;
+}
+
+.detail > span:nth-child(2) {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.detail > span:nth-child(3) {
+  font-size: 12px;
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 74px;
+  width: auto;
+}
+
+.last {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+  width: auto;
+
+}
+
+.tables,
+.customer {
+  background-color: var(--background-color);
+  box-shadow: var(--box-shadow-color) 0 7px 29px 0;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.tables {
+  padding: 4px 21px;
+  width: 65%
+
+}
+
+.customer {
+  z-index: 1;
+  width: 35%
+}
+
+@media (min-width: 768px) {
+  .last {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.activity {
+  flex-grow: 1;
+  border-radius: 8px;
+  margin-top: -17px;
+  padding-bottom: 24px;
+}
+
+.customer-review {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.activity-data {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.data {
+  flex-grow: 1;
+  min-width: 100px;
+}
+
+.data-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.data-list {
+  margin-bottom: 8px;
+}
+
+@media (min-width: 768px) {
+  .middle {
+    flex-direction: row;
+  }
+}

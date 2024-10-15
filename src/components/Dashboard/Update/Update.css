@@ -1,0 +1,57 @@
+
+:root {
+    /* ===== Light Theme Colors ===== */
+    --background-color: white;
+    --text-color: black;
+    --border-color: #cccccc;
+    --box-shadow-color: rgba(100, 100, 111, 0.2);
+    --img-brightness: 1; /* Normal image brightness */
+}
+
+.wrapper.dark {
+    /* ===== Dark Theme Colors ===== */
+    --background-color: #1a1a1a;
+    --text-color: white;
+    --border-color: #444;
+    --box-shadow-color: rgba(100, 100, 111, 0.4); /* Slightly darker shadow */
+    --img-brightness: 0.8; /* Dim images in dark mode */
+}
+
+.Updates {
+    background: var(--background-color);
+    border-radius: 0.7rem;
+    padding: 1rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    box-shadow: var(--box-shadow-color) 0px 7px 29px 0px;
+    border: 1px solid var(--border-color);
+    color: var(--text-color); /* Adjust text color */
+    width: 40%;
+}
+
+.update {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.update > img {
+    width: 3.2rem;
+    height: 3.2rem;
+    filter: brightness(var(--img-brightness)); /* Apply brightness based on mode */
+}
+
+.noti > div > span:nth-of-type(1) {
+    font-weight: bold;
+}
+
+.title_u {
+    margin: 17px 0 !important;
+}
+
+@media (max-width: 992px) {
+    .Updates {
+        width: calc(100%);
+    }
+}

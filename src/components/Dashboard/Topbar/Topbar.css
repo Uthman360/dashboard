@@ -1,0 +1,22 @@
+.profile-box img {
+    height: 40px;
+    width: 43px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid #00a261;
+}
+
+
+@media (max-width: 768px) {
+    .profile-box img {
+        height: 43px;
+        width: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-box img {
+        height: 40px;
+        width: 70px;
+    }
+}
