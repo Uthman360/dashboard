@@ -21,12 +21,13 @@ const Profile = ({ popup, handlerDark, setPopup }) => {
       // Add event listener if the popup is open
       document.addEventListener('mousedown', handleClickOutside);
     } 
-   
     // Cleanup function to remove the event listener
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [popup]);
+
+ 
 
   const handleLinkClick = () => {
     setPopup(false); // Close popup when a link is clicked

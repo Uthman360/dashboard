@@ -24,7 +24,7 @@
   --icon-b: #0E4BF1;
   --icon-color: #fff;
   --body: #fff;
-  --menu-color:#000;
+  --menu-color: #000;
 
   /* ====== Transition ====== */
   --tran-05: all 0.5s ease;
@@ -48,15 +48,16 @@
   --icon-b: #fff;
   --icon-color: #CCC;
   --body: #000;
-  --menu-color:#fff;
+  --menu-color: #fff;
 
 }
 
 
 body.dark {
-  background-color: #242526 ;
+  background-color: #242526;
   color: white;
 }
+
 /* === Custom Scroll Bar CSS === */
 ::-webkit-scrollbar {
   width: 8px;
@@ -65,7 +66,7 @@ body.dark {
 
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
-  
+
 }
 
 ::-webkit-scrollbar-thumb {
@@ -87,8 +88,7 @@ body.dark {
 
 .wrapper {
   width: 100%;
-  max-width: 1520px;
-  margin: 0 auto;
+
 }
 
 nav {
@@ -235,7 +235,7 @@ body.dark li a:hover:before {
   display: flex;
   align-items: center;
   justify-content: center;
-  color:var(--menu-color);
+  color: var(--menu-color);
   margin-left: 16px;
 }
 
@@ -330,20 +330,16 @@ nav.close .switch {
   left: 275px;
   background-color: var(--panel-color);
   min-height: 100vh;
-  width: calc(100% - 290px);
+  width: calc(100% - 260px);
   transition: var(--tran-05);
 }
 
 nav.close~.dashboard {
   left: 73px;
-  width: calc(100% - 73px);
+  width: calc(100% - 0px);
 }
 
 .dashboard .top {
-  display: flex;
-  /* width: calc(100% - 290px); */
-  justify-content: space-between;
-  align-items: center;
   padding: 10px 14px;
   background-color: var(--panel-color);
   transition: var(--tran-05);
@@ -353,7 +349,7 @@ nav.close~.dashboard {
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 12px 32px;
- 
+
 }
 
 nav.close~.dashboard .top {
@@ -408,7 +404,8 @@ nav.close~.dashboard .top {
 .dashboard .dash-content {
   /* padding-top: 50px; */
   padding: 10px 14px;
-
+  max-width: 1300px;
+  margin-inline: auto;
 
 }
 
@@ -486,18 +483,23 @@ nav.close~.dashboard .top {
   box-shadow: 0px 10px 20px 0px #F9D59B;
 
 }
+
 .dash-content .activity {
-  width:auto; /* Set width to 50% */
- /* margin: 0 auto;  Center the table inside its container */
-  box-sizing: border-box; /* Include padding/border in width */
+  width: auto;
+  /* Set width to 50% */
+  /* margin: 0 auto;  Center the table inside its container */
+  box-sizing: border-box;
+  /* Include padding/border in width */
 }
+
 .dash-content .activity .activity-data {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-.custom_text{
+
+.custom_text {
   font-size: 20px;
   font-weight: 500;
   color: var(--text-color);
@@ -505,6 +507,7 @@ nav.close~.dashboard .top {
   margin-top: -40px;
 
 }
+
 .activity .activity-data {
   display: flex;
 }
@@ -600,22 +603,22 @@ nav.close~.dashboard .top {
 
   nav~.dashboard {
     left: 73px;
-    width: calc(100% - 73px);
+    width: calc(100% - 0px);
   }
 
   nav.close~.dashboard {
     left: 250px;
-    width: calc(100% - 250px);
+    width: calc(100% - 0px);
   }
 
   nav~.dashboard .top {
     left: 73px;
-    width: calc(100% - 73px);
+    width: calc(100% - 0px);
   }
 
   nav.close~.dashboard .top {
     left: 250px;
-    width: calc(100% - 250px);
+    width: calc(100% - 0px);
   }
 
   .activity .activity-data {
@@ -684,7 +687,7 @@ nav.close~.dashboard .top {
 
   nav.close~.dashboard {
     left: 73px;
-    width: calc(100% - 73px);
+    width: calc(100% - 0px);
   }
 
   nav~.dashboard .top {

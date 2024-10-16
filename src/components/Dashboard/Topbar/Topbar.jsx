@@ -4,11 +4,14 @@ import Profile from '../Profile/Profile';
 
 
 const Navbar = ({ navHandler, handlerDark,setPopup,popup,handlerPop }) => {
- 
+  useEffect(()=>{
+    
+ },[])
 
   return (
     <div className="top">
-      <div className="sidebar-toggle" onClick={navHandler}>
+     <div className="top_bar">
+     <div className="sidebar-toggle" onClick={navHandler}>
         <i className="uil uil-bars sidebar-toggle"></i>
       </div>
       <div className="search-box">
@@ -24,6 +27,7 @@ const Navbar = ({ navHandler, handlerDark,setPopup,popup,handlerPop }) => {
         <Profile popup={popup} handlerDark={handlerDark} setPopup={setPopup} />
 
       </div>
+     </div>
     </div>
   );
 };

@@ -5,7 +5,13 @@
     cursor: pointer;
     border: 2px solid #00a261;
 }
-
+.top_bar{
+    display: flex;
+    margin-inline: auto;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1240px;
+}
 
 @media (max-width: 768px) {
     .profile-box img {

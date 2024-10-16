@@ -33,7 +33,10 @@ const Dashboard = ({ children }) => {
     }
 
     const togglePopup = () => {
-        setPopup((prevPopup) => !prevPopup);
+        if(!popup){
+            setPopup((prevPopup) => !prevPopup);
+        }
+     
     };
 
     return (

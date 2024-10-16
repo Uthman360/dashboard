@@ -147,6 +147,7 @@
     border-radius: 4px;
     background-color: var(--submenu-background);
     color: var(--submenu-link-color);
+    cursor: pointer;
 }
 
 .wrapper.dark .sign_out {
