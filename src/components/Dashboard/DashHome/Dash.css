@@ -97,14 +97,11 @@
 
 .tables {
   padding: 4px 21px;
-  width: 100%
+  width: 60%
 
 }
 
-.customer {
-  z-index: 1;
-  width: 55%
-}
+
 
 @media (min-width: 768px) {
   .last {
@@ -112,6 +109,12 @@
     justify-content: space-between;
     align-items: flex-start;
   }
+  .customer {
+    z-index: 1;
+    width: 40%
+  }
+
+  
 }
 
 .activity {
@@ -153,5 +156,11 @@
 @media (min-width: 768px) {
   .middle {
     flex-direction: row;
+  }
+  
+}
+@media (max-width:768px){
+  .tables{
+    width: 100%;
   }
 }

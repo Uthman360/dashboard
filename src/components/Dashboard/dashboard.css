@@ -330,13 +330,13 @@ nav.close .switch {
   left: 275px;
   background-color: var(--panel-color);
   min-height: 100vh;
-  width: calc(100% - 260px);
+  width: calc(100% - 300px);
   transition: var(--tran-05);
 }
 
 nav.close~.dashboard {
   left: 73px;
-  width: calc(100% - 0px);
+  /* width: calc(100% - 73px); */
 }
 
 .dashboard .top {
@@ -603,7 +603,7 @@ nav.close~.dashboard .top {
 
   nav~.dashboard {
     left: 73px;
-    width: calc(100% - 0px);
+    width: calc(100% - 73px);
   }
 
   nav.close~.dashboard {

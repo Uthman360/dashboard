@@ -13,7 +13,6 @@ const CustomerReview = () => {
     options: {
       chart: {
         type: "area",
-        height: "300px",
       },
 
       fill: {
