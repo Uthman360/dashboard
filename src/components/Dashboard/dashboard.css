@@ -336,7 +336,7 @@ nav.close .switch {
 
 nav.close~.dashboard {
   left: 73px;
-  /* width: calc(100% - 73px); */
+  width: calc(100% - 73px);
 }
 
 .dashboard .top {
@@ -349,12 +349,12 @@ nav.close~.dashboard {
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 12px 32px;
-
+  width: calc(100% - -23px); /* Adjust width for larger screens */
 }
 
 nav.close~.dashboard .top {
   left: 73px;
-  width: calc(100% - 73px);
+  width: calc(100% - 0px); 
 }
 
 .dashboard .top .sidebar-toggle {

@@ -3,10 +3,12 @@ import "./Topbar.css"; // Separate CSS for navbar
 import Profile from '../Profile/Profile';
 
 
-const Navbar = ({ navHandler, handlerDark,setPopup,popup,handlerPop }) => {
-  useEffect(()=>{
-    
- },[])
+const Navbar = ({ navHandler, handlerDark }) => {
+  const [popup, setPopup] = useState(false);
+  
+  const handlerPop = () => {
+    setPopup(!popup)
+  }
 
   return (
     <div className="top">

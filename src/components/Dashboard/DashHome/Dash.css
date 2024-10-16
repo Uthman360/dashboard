@@ -97,25 +97,11 @@
 
 .tables {
   padding: 4px 21px;
-  width: 60%
-
+  width: 60%;
 }
 
 
 
-@media (min-width: 768px) {
-  .last {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  .customer {
-    z-index: 1;
-    width: 40%
-  }
-
-  
-}
 
 .activity {
   flex-grow: 1;
@@ -158,6 +144,14 @@
     flex-direction: row;
   }
   
+  .last {
+    flex-direction: row;
+ 
+  }
+  .customer{
+    width: 380px;
+    z-index: 1;
+  }
 }
 @media (max-width:768px){
   .tables{

@@ -29,6 +29,7 @@
     border: 1px solid var(--border-color);
     color: var(--text-color); /* Adjust text color */
     width: 55%;
+    
 }
 
 .update {

@@ -7,7 +7,6 @@ const Dashboard = ({ children }) => {
     // Set the initial dark mode based on localStorage synchronously
     const [isDark, setDarkMode] = useState(() => localStorage.getItem('theme') === 'dark');
     const [sidebar, setSidebar] = useState(() => localStorage.getItem('status') === 'close');
-    const [popup, setPopup] = useState(false);
 
     const toggleDarkMode = () => {
         setDarkMode((prevMode) => {
@@ -32,12 +31,7 @@ const Dashboard = ({ children }) => {
         document.body.classList.remove('dark');
     }
 
-    const togglePopup = () => {
-        if(!popup){
-            setPopup((prevPopup) => !prevPopup);
-        }
-     
-    };
+   
 
     return (
         <div className={`wrapper ${isDark ? 'dark' : ''}`}>
@@ -45,9 +39,6 @@ const Dashboard = ({ children }) => {
             <section className="dashboard">
                 <Navbar
                     navHandler={toggleSidebar}
-                    handlerPop={togglePopup}
-                    popup={popup}
-                    setPopup={setPopup}
                     handlerDark={toggleDarkMode}
                 />
                 <div className="dash-content">{children}</div>
