@@ -97,7 +97,7 @@
 
 .tables {
   padding: 4px 21px;
-  width: 60%;
+  width: 100%;
 }
 
 
@@ -138,20 +138,25 @@
 .data-list {
   margin-bottom: 8px;
 }
-
-@media (min-width: 768px) {
+@media (min-width: 1100px) {
   .middle {
     flex-direction: row;
   }
-  
   .last {
     flex-direction: row;
  
   }
+    
   .customer{
     width: 380px;
     z-index: 1;
   }
+}
+
+@media (min-width: 768px) {
+ 
+  
+
 }
 @media (max-width:768px){
   .tables{

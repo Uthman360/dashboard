@@ -11,6 +11,7 @@
     justify-content: space-between;
     width: 100%;
     max-width: 1240px;
+    position: relative;
 }
 
 @media (max-width: 768px) {

@@ -7,27 +7,7 @@ import help from '../../../assets/images/help.png';
 import { IoIosArrowForward } from 'react-icons/io';
 
 const Profile = ({ popup, handlerDark, setPopup }) => {
-  const popupRef = useRef(null);
 
-  const handleClickOutside = (event) => {
-    if (popupRef.current && !popupRef.current.contains(event.target)) {
-      setPopup(false); // Close the popup if clicked outside
-    }
-  };
-
-  // Add event listener to detect clicks outside the pop-up
-  useEffect(() => {
-    if (popup) {
-      // Add event listener if the popup is open
-      document.addEventListener('mousedown', handleClickOutside);
-    } 
-    // Cleanup function to remove the event listener
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [popup]);
-
- 
 
   const handleLinkClick = () => {
     setPopup(false); // Close popup when a link is clicked
@@ -39,7 +19,7 @@ const Profile = ({ popup, handlerDark, setPopup }) => {
         <>
           {/* Overlay */}
           <div className="sub_menu_wrap">
-            <div className="sub_menu" ref={popupRef}>
+            <div className="sub_menu">
               <div className="user_info">
                 <img src="https://syedz.vercel.app/assets/2-D_JiKlq0.jpg" alt="" />
                 <div className="user_e">

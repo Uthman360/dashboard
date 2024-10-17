@@ -77,7 +77,7 @@ body.dark {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0b3cc1;
+  background: #242526;
 
 }
 
@@ -332,6 +332,7 @@ nav.close .switch {
   min-height: 100vh;
   width: calc(100% - 300px);
   transition: var(--tran-05);
+
 }
 
 nav.close~.dashboard {
@@ -350,6 +351,7 @@ nav.close~.dashboard {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 12px 32px;
   width: calc(100% - -23px); /* Adjust width for larger screens */
+
 }
 
 nav.close~.dashboard .top {
