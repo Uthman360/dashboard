@@ -1,4 +1,3 @@
-import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './Profile.css';
 import profile from '../../../assets/images/profile.png';
@@ -6,7 +5,7 @@ import settings from '../../../assets/images/setting.png';
 import help from '../../../assets/images/help.png';
 import { IoIosArrowForward } from 'react-icons/io';
 
-const Profile = ({ popup, handlerDark, setPopup }) => {
+const Profile = ({ popup, handlerDark, setPopup,popupRef }) => {
 
 
   const handleLinkClick = () => {
@@ -18,7 +17,7 @@ const Profile = ({ popup, handlerDark, setPopup }) => {
       {popup && (
         <>
           {/* Overlay */}
-          <div className="sub_menu_wrap">
+          <div className="sub_menu_wrap" ref={popupRef}>
             <div className="sub_menu">
               <div className="user_info">
                 <img src="https://syedz.vercel.app/assets/2-D_JiKlq0.jpg" alt="" />

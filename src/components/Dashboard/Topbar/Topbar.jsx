@@ -4,27 +4,34 @@ import Profile from '../Profile/Profile';
 
 const Navbar = ({ navHandler, handlerDark }) => {
   const [popup, setPopup] = useState(false);
-  const profileBoxRef = useRef(null);  // Ref for the profile box to track clicks inside
+  const profileBoxRef = useRef(null);  // Ref for the profile box (avatar)
+  const profileRef = useRef(null);     // Ref for the profile popup
 
   const handlerPop = () => {
-    setPopup(!popup);  // Toggle the popup on profile box click
+    setPopup(!popup);  // Toggle popup
   };
 
   const handleClickOutside = (event) => {
-    if (profileBoxRef.current && !profileBoxRef.current.contains(event.target)) {
-      setPopup(false);  // Close popup when clicking outside
+    // Check if click is outside both the profile box and profile popup
+    if (
+      profileBoxRef.current &&
+      !profileBoxRef.current.contains(event.target) &&  // If click is outside profile box
+      profileRef.current &&
+      !profileRef.current.contains(event.target)        // And outside profile popup
+    ) {
+      setPopup(false);  // Close popup if click is outside
     }
   };
 
-  // Add event listener when popup is true
+  // Effect to handle adding/removing the event listener
   useEffect(() => {
     if (popup) {
       window.addEventListener("mousedown", handleClickOutside);
     } else {
-      window.removeEventListener("mousedown", handleClickOutside);  // Clean up event when popup is closed
+      window.removeEventListener("mousedown", handleClickOutside);
     }
 
-    // Clean up when the component unmounts
+    // Cleanup function to remove the event listener on unmount
     return () => {
       window.removeEventListener("mousedown", handleClickOutside);
     };
@@ -46,7 +53,13 @@ const Navbar = ({ navHandler, handlerDark }) => {
             <img src="https://syedz.vercel.app/assets/2-D_JiKlq0.jpg" alt="Profile" />
           </div>
 
-          <Profile popup={popup} handlerDark={handlerDark} setPopup={setPopup} />
+          {/* Profile Popup */}
+          <Profile 
+            popup={popup} 
+            handlerDark={handlerDark} 
+            setPopup={setPopup} 
+            popupRef={profileRef}  // Pass ref to the Profile component
+          />
         </div>
       </div>
     </div>
