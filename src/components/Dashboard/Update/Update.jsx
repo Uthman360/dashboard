@@ -28,9 +28,9 @@ const Updates = () => {
         </span>
       </div >
       {
-        UpdatesData.map((update) => {
+        UpdatesData.map((update,i) => {
           return (
-            <div className="update">
+            <div key={i} className="update">
               <img src={update.img} alt="profile" />
               <div className="noti">
                 <div style={{ marginBottom: '0.5rem' }}>
